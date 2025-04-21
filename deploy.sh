@@ -13,6 +13,7 @@ elif [ "$BRANCH_NAME" == "main" ]; then
   docker pull suresh/prod-react-image:latest
   docker run -d -p 80:80 --name my-reactapp-container sureshv/prod-react-image:latest
 fi
-
+chmod +x deploy.sh
+echo "Deployment script executed successfully."
 
 
