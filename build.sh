@@ -15,6 +15,10 @@ fi
 chmod +x build.sh
 echo "Build script executed successfully."
 
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 596bf86c2564bc5635e5e7864c52b2036eb7905b
 
 
