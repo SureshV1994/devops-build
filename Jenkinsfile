@@ -1,29 +1,19 @@
 pipeline {
     agent any
 
-    environment {
-        BRANCH_NAME = "${env.BRANCH_NAME}"
-    }
-
     stages {
-        stage('Checkout') {
+        stage('Build and Push Docker Image') {
             steps {
-                checkout scm
+                // Grant executable permissions to the build script
+                sh 'chmod +x deploy.sh'
+                sh 'chmod +x build.sh'
+                // Build the Docker image using the build script
+                sh './build.sh'
+                sh './deploy.sh'
+
+                
             }
         }
 
-        stage('Execution permission to scripts') {
-            steps {
-                sh '''
-                chmod +x build.sh
-                chmod +x deploy.sh
-                '''
-            }
-        }
-
-  stage('Build & Push Docker Image') {
-      steps {
-          sh './build.sh'
-          sh './deploy.sh'
-      }   
-   }
+    }
+}
