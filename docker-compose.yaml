@@ -1,6 +1,6 @@
 version: '3'
 services:
   react-capstone:
-    image: "sureshv1994/prod-react-image"
+    image: "sureshv1994/dev-react-image"
     ports:
       - "85:80"
