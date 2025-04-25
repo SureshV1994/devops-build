@@ -12,5 +12,3 @@ elif [ "$BRANCH_NAME" == "main" ]; then
   echo "Suresh@1994" | docker login -u "suresh" --password-stdin
   docker push suresh/prod-react-image:latest
 fi
-chmod +x build.sh
-echo "Build script executed successfully."
