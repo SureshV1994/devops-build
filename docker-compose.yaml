@@ -1,34 +1,6 @@
-<<<<<<< HEAD
-version: "3.8"
+version: '3'
 services:
-  react-app:
-    build: .
-    container_name: my-reactapp-container
-    restart: always
+  react-capstone:
+    image: "sureshv1994/prod-react-image"
     ports:
-      - "80:80"
-    networks:
-      - app-network
-networks:
-  app-network:
-    driver: bridge
-    driver_opts:
-      com.docker.network.bridge.name: my_bridge_network
-=======
-version: "3.8"
-services:
-  react-app:
-    build: .
-    container_name: my-reactapp-container
-    restart: always
-    ports:
-      - "80:80"
-    networks:
-      - app-network
-networks:
-  app-network:
-    driver: bridge
-    driver_opts:
-      com.docker.network.bridge.name: my_bridge_network
-      
->>>>>>> 596bf86c2564bc5635e5e7864c52b2036eb7905b
+      - "85:80"
