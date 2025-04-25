@@ -1,4 +1,4 @@
  #!/bin/bash
-  docker build -t suresh/dev-react-image .
+  docker build -t sureshv1994/dev-react-image .
   echo "Suresh@1994" | docker login -u "sureshv1994" -p dckr_pat_iXHZs9e6ZPqqulHue-kNYiNMMho
-  docker push suresh/dev-react-image:latest
+  docker push sureshv1994/dev-react-image
